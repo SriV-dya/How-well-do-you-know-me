@@ -6,8 +6,57 @@
     <title>How well do you know me quiz app</title>
 </head>
 <body>
-    app was made on 14th November
-    in the first session of neog camp
-    it is a cli app made on repl.it
+    console.log('HOW WELL DO YOU KNOW SRIV');
+    var readlineSync = require('readline-sync');
+    var userName = readlineSync.question('May I have your name? ');
+    console.log('welcome '+userName);
+    console.log('to the HOW WELL YOU KNOW SRIVI quiz!!');
+  
+  var score=0;
+  
+  function play(question, answer) {
+    var userAnswer = readlineSync.question(question);
+  
+    if (userAnswer.toUpperCase() === answer.toUpperCase()) { 
+      console.log("right!");
+      score = score + 1;
+      
+    } else {
+      console.log("wrong!");
+     
+    }
+  
+    console.log("current score: ", score);
+    console.log("-------------")
+  }
+  
+  
+  var questions = [{
+    question: "Where does srivi live? ",
+    answer: "bangalore"
+  }, {
+    question: "What does srivi like to eat",
+    answer: "cookies"
+  },
+  {
+    question: "What is srivi's favorite animal ",
+    answer: "ladybug"
+  },{
+    question:"Whom does srivi desperately wanna meet?",
+    answer: "Jane goodall"
+  },{
+    question:"which series is srivi always watching?",
+    answer: "Rick and Morty"
+  
+  }];
+  
+  
+  for (var i=0; i<questions.length; i++) {
+    var currentQuestion = questions[i];
+    play(currentQuestion.question, currentQuestion.answer)
+  }
+  
+  console.log(" You SCORED: ", score);
+
 </body>
 </html>
