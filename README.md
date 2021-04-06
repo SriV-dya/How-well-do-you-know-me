@@ -1,4 +1,4 @@
-# ASSIGNMENT 1: HOW WELL DO YOU KNOW ME QUIZ APP
+## how well do you know me?
 
 This app is a command line interaction app.
 It also happens to be a quiz to test your friends and family as to how well they know you.
